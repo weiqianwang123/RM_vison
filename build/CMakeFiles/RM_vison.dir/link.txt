@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/RM_vison.dir/main.cpp.o  -o RM_vison 
