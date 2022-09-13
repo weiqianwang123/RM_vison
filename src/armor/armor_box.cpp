@@ -14,26 +14,26 @@ using namespace std;
  * @param dis_size 相对相机的距离及装甲板大小
  */
 ArmorBox::ArmorBox(const cv::RotatedRect &pos, const LightBlobs &blobs, int  box_color, int box_id, DistanceSize dis_size) :
-        rect(pos), light_Blobs(blobs),id(box_id),distance_size(dis_size){
+        rect_(pos), light_Blobs_(blobs),id(box_id),distance_size_(dis_size){
     //
     };
 
 ArmorBox::ArmorBox(const LightBlob &l_blob, const LightBlob &r_blob,bool Dist_height_rate,int pred_id){
     is_empty = false;
-    set_points(l_blob.rect,r_blob.rect);
-    RotatedRect rect = minAreaRect(armor_points);
-    this->rect = rect;
-    this->light_Blobs = {l_blob,r_blob};
+    set_points(l_blob.rect_,r_blob.rect_);
+    RotatedRect rect = minAreaRect(armor_points_);
+    this->rect_ = rect;
+    this->light_Blobs_ = {l_blob,r_blob};
     if(Dist_height_rate){
-        boxSize = 1;
-        armortype = SMALL;//缝合
+        boxSize_ = 1;
+        armortype_ = SMALL;//缝合
 
     }
     else{
-        boxSize = 0;
-        armortype = BIG;//缝合
+        boxSize_ = 0;
+        armortype_ = BIG;//缝合
     }
-    id = pred_id;
+    id_ = pred_id;
     };
 
 /**
@@ -43,34 +43,34 @@ bool ArmorBox::operator<(const ArmorBox &box)const{
     if(1){
         //加入id比较
     }
-    auto d1 = (rect.center.x - IMAGE_CENTER_X) * (rect.center.x - IMAGE_CENTER_X)
-                  + (rect.center.y - IMAGE_CENTER_Y) * (rect.center.y - IMAGE_CENTER_Y);
-    auto d2 = (box.rect.center.x - IMAGE_CENTER_X) * (box.rect.center.x - IMAGE_CENTER_X)
-                  + (box.rect.center.y - IMAGE_CENTER_Y) * (box.rect.center.y - IMAGE_CENTER_Y);
+    auto d1 = (rect_.center.x - IMAGE_CENTER_X) * (rect_.center.x - IMAGE_CENTER_X)
+                  + (rect_.center.y - IMAGE_CENTER_Y) * (rect_.center.y - IMAGE_CENTER_Y);
+    auto d2 = (box.rect_.center.x - IMAGE_CENTER_X) * (box.rect_.center.x - IMAGE_CENTER_X)
+                  + (box.rect_.center.y - IMAGE_CENTER_Y) * (box.rect_.center.y - IMAGE_CENTER_Y);
     return d1 < d2;
 }
 
 void ArmorBox::set_points(const cv::RotatedRect &l_light, const cv::RotatedRect &r_light){
-    armor_points.resize(4);
+    armor_points_.resize(4);
     Point2f l_rect[4],r_rect[4];
     l_light.points(l_rect);
     r_light.points(r_rect);
 
     if(l_light.size.width>l_light.size.height){
-        armor_points[0] = (l_rect[1] + l_rect[0])*0.5;
-        armor_points[1] = (l_rect[2] + l_rect[3])*0.5;
+        armor_points_[0] = (l_rect[1] + l_rect[0])*0.5;
+        armor_points_[1] = (l_rect[2] + l_rect[3])*0.5;
     }
     else{
-        armor_points[0] = (l_rect[0] + l_rect[3])*0.5;
-        armor_points[1] = (l_rect[1] + l_rect[2])*0.5;
+        armor_points_[0] = (l_rect[0] + l_rect[3])*0.5;
+        armor_points_[1] = (l_rect[1] + l_rect[2])*0.5;
     }
     if(r_light.size.width>r_light.size.height){
-        armor_points[3] = (r_rect[0]+r_rect[1])*0.5;
-        armor_points[2] = (r_rect[3] + r_rect[2])*0.5;
+        armor_points_[3] = (r_rect[0]+r_rect[1])*0.5;
+        armor_points_[2] = (r_rect[3] + r_rect[2])*0.5;
     }
     else{
-        armor_points[3] = (r_rect[3]+r_rect[0])*0.5;
-        armor_points[2] = (r_rect[2]+r_rect[1])*0.5;
+        armor_points_[3] = (r_rect[3]+r_rect[0])*0.5;
+        armor_points_[2] = (r_rect[2]+r_rect[1])*0.5;
     }
     // cout<<"set points:"<<armor_points<<endl;
 }
@@ -82,7 +82,7 @@ void ArmorBox::set_points(const cv::RotatedRect &l_light, const cv::RotatedRect 
  */
 void loadParam(struct ArmorParam & param){
     //string  filename="../params/ArmorBox.xml";
-    string  filename="../Vision/Detector/params/ArmorBox.xml";
+    string  filename="./congigure/armorbox.xml";
     cv::FileStorage fs(filename, cv::FileStorage::READ);
     if(!fs.isOpened()){
         cout<<"please check your armor param file"<<endl;
@@ -128,6 +128,6 @@ void loadParam(struct ArmorParam & param){
  */
 
 bool LightBlob::setAngle(){
-    angle_ = rect.size.height>rect.size.width? -1*abs(rect.angle):(rect.angle+90);
+    angle_ = rect_.size.height>rect_.size.width? -1*abs(rect_.angle):(rect_.angle+90);
     return true;
 }

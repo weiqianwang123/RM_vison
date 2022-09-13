@@ -73,11 +73,11 @@ class LightBlob
 {
 public:
     //! 包含灯条位置（旋转）
-    cv::RotatedRect rect;
+    cv::RotatedRect rect_;
     //! 轮廓与外包矩形面积比
-    double area_ratio;
+    double area_ratio_;
     //! 长轴长度
-    double length;
+    double length_;
     // 灯条角度
     double angle_;
 
@@ -89,9 +89,9 @@ public:
      * @param r 旋转矩形
      * @param ratio  轮廓与外包矩形面积比
     */
-    LightBlob(cv::RotatedRect &r, double ratio) : rect(r), area_ratio(ratio)
+    LightBlob(cv::RotatedRect &r, double ratio) : rect_(r), area_ratio_(ratio)
     {
-        length = std::max(rect.size.height, rect.size.width);
+        length_ = std::max(rect_.size.height, rect_.size.width);
         setAngle();
     }
 
@@ -123,16 +123,16 @@ class ArmorBox
 {
 public:
     
-    cv::RotatedRect rect;//! 装甲板旋转矩形
-    LightBlobs light_Blobs;//! 装甲板的一对灯条
-    int id=-1;//！ 装甲板id;1号英雄，2号工程，3、4、5步兵，6无人机，7哨兵
-    bool is_empty=true; // 是否是空的装甲板
-    int boxSize=0;// 装甲板类型，0为小，1为大；
+    cv::RotatedRect rect_;//! 装甲板旋转矩形
+    LightBlobs light_Blobs_;//! 装甲板的一对灯条
+    int id_=-1;//！ 装甲板id;1号英雄，2号工程，3、4、5步兵，6无人机，7哨兵
+    bool is_empty_=true; // 是否是空的装甲板
+    int boxSize_=0;// 装甲板类型，0为小，1为大；
 
-    ArmorType armortype = SMALL;
+    ArmorType armortype_ = SMALL;
     // 灯条的四个顶点   
-    std::vector<Point2f> armor_points;// bl,tl,tr,br;
-    DistanceSize distance_size ;
+    std::vector<Point2f> armor_points_;// bl,tl,tr,br;
+    DistanceSize distance_size_ ;
     // 装甲板得分。
     double score;
     /**

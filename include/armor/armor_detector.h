@@ -7,42 +7,42 @@
 
 #include <string>
 #include "ArmorBox.h"
-#include "Classifier.h"
+//#include "Classifier.h"
 using namespace cv;
 
 class ArmorDetector
 {
 private:
     //!  分类器
-    Classifier_lenet5 classifier;
+    //Classifier_lenet5 classifier;
 
     // roi区域追踪帧数；
-    int num=1;
-    int num_noBox = 0; //连续多少帧找不到目标装甲板
+    int num_=1;
+    int num_noBox_ = 0; //连续多少帧找不到目标装甲板
     
     
 public:
     //! 敌方颜色,0为红色，1为蓝色
-    int enemy_color;
+    int enemy_color_;
     // 是否找到装甲板
-    bool is_findBox;
+    bool is_findBox_;
     //!  装甲板限制参数
-    ArmorParam armor_param;
+    ArmorParam armor_param_;
     //! 目标装甲板
-    ArmorBox target_box;
+    ArmorBox target_box_;
     //! 目标装甲板集
-    ArmorBoxes _armor_boxes;
+    ArmorBoxes armor_boxes_;
     //! 目标灯条集
-    LightBlobs _light_blobs;
+    LightBlobs light_blobs_;
     //! 图像ROI区域
-    cv::Mat  roi;
-    Mat binary_Mat; // 处理后的图
+    cv::Mat  roi_;
+    Mat binary_Mat_; // 处理后的图
     //！ ROI区域的偏移量
-    cv::Point2f offset;
+    cv::Point2f offset_;
     // 原图像
-    Mat src;
+    Mat src_;
 
-    u_char shoot_code=0x0; //0是没找到 1是找到了
+    u_char shoot_code_=0x0; //0是没找到 1是找到了
 public:
 
 /**

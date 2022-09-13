@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<opencv_storage>
+
+<!-- 匹配装甲板 -->
+<lights_lenght_min_ratio>0.65</lights_lenght_min_ratio>  <!--0.4-->
+<lights_lenght_max_ratio>1.5</lights_lenght_max_ratio>  <!--2.5-->
+<lights_center_min_ratio>0.8</lights_center_min_ratio>
+<lights_center_max_ratio>6</lights_center_max_ratio>   <!--10-->
+<lights_height_max_dif_4>1</lights_height_max_dif_4>
+<lights_height_max_dif_10>0.8</lights_height_max_dif_10>
+<lights_height_max_dif_15>1</lights_height_max_dif_15>
+<cp_lights_angle_diff>10</cp_lights_angle_diff> <!--判断是否是一对灯条时，两个灯条的角度差-->
+
+
+<!-- 灯条 -->
+<light_min_wihe_ratio>0.8</light_min_wihe_ratio>
+<light_max_wihe_ratio>30</light_max_wihe_ratio>
+<light_min_area_ratio>0.000003</light_min_area_ratio>
+<light_max_area_ratio>0.08</light_max_area_ratio>
+<lights_angle_max_dif>20</lights_angle_max_dif> <!--the light blob's angle-->
+
+<!-- 形态学 -->
+<gray_light_min_threshold>90</gray_light_min_threshold> 
+<!-- 90 -->
+<blue_light_min_threshold>60</blue_light_min_threshold>
+<!-- 20 -->
+<red_light_min_threshold>20</red_light_min_threshold>
+
+<lights_xBias_yBias_ratio_min>15</lights_xBias_yBias_ratio_min>
+
+<color>1</color> <!--the enemy color 0-red;1-bule-->
+<IMAGE_COLS>720</IMAGE_COLS> <!--图像的高-行 -->
+<IMAGE_ROWS>1280</IMAGE_ROWS> <!--图像的宽-列-->
+<minCounterSize>3</minCounterSize>
+<num_max>300</num_max>
+<lights_wihe_rate_boxSzie>3.0</lights_wihe_rate_boxSzie> <!--通过灯条中心距离与等条高度比，来确定装甲板的尺寸-->
+
+
+<num_noBox_max>2</num_noBox_max> <!--最大连续多少帧找不到目标装甲板-->
+</opencv_storage>
