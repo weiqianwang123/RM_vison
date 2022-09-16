@@ -314,7 +314,7 @@ bool  ArmorDetector::isCoupleLight(const LightBlob &light_blob_i, const LightBlo
     // imshow("the classifier pic",roi_classifier);waitKey(1);
     
     //!!!!!
-    //id_ = classifier.inference(roi_classifier);
+    //id_ = classifier.classifier(roi_classifier);
     // if(id==8||id==9||id==10){
     //     return false;
 

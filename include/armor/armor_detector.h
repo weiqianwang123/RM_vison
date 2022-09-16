@@ -6,15 +6,15 @@
 #define ARMORDETECTOR_H_
 
 #include <string>
-#include "ArmorBox.h"
-//#include "Classifier.h"
+#include "armor_box.h"
+#include "opencv_classifier.h"
 using namespace cv;
 
 class ArmorDetector
 {
 private:
     //!  分类器
-    //Classifier_lenet5 classifier;
+    Classifier_lenet5 classifier;
 
     // roi区域追踪帧数；
     int num_=1;

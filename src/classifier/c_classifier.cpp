@@ -1,7 +1,7 @@
 //
 // Created by oem on 2022/9/11.
 //
-#include "C_Classifier.h"
+#include "c_classifier.h"
 #include <cstdio>
 #include <iostream>
 
@@ -397,9 +397,12 @@ int Classifier::operator()(const cv::Mat &image) {
     MatrixXd result = calculate(in);
     MatrixXd::Index minRow, minCol;
     result.maxCoeff(&minRow, &minCol); //返回矩阵中最大值的位置
-    if (result(minRow, minCol) > -10) { ////0.50
+    if (result(minRow, minCol) > -10)
+    {
         return minRow;
-    } else {
+    }
+    else
+    {
         return -1;
     }
 }

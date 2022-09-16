@@ -85,7 +85,7 @@ void loadParam(struct ArmorParam & param){
     string  filename="./congigure/armorbox.xml";
     cv::FileStorage fs(filename, cv::FileStorage::READ);
     if(!fs.isOpened()){
-        cout<<"please check your armor param file"<<endl;
+        cout<<"please check your armor classifier_param file"<<endl;
         assert(fs.isOpened());
         return;
         }
