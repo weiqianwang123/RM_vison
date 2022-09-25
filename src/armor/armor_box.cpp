@@ -128,7 +128,8 @@ void loadParam(struct ArmorParam & param){
  * @return false 
  */
 
-bool LightBlob::setAngle(){
+bool LightBlob::setAngle()
+{
     angle_ = rect_.size.height>rect_.size.width? -1*abs(rect_.angle):(rect_.angle+90);
     return true;
 }
