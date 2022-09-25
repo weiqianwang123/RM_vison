@@ -24,12 +24,13 @@ ArmorBox::ArmorBox(const LightBlob &l_blob, const LightBlob &r_blob,bool Dist_he
     RotatedRect rect = minAreaRect(armor_points_);
     this->rect_ = rect;
     this->light_Blobs_ = {l_blob,r_blob};
-    if(Dist_height_rate){
+    if(Dist_height_rate)
+    {
         boxSize_ = 1;
         armortype_ = SMALL;//缝合
-
     }
-    else{
+    else
+    {
         boxSize_ = 0;
         armortype_ = BIG;//缝合
     }

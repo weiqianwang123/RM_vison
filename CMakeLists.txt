@@ -22,6 +22,7 @@ INCLUDE_DIRECTORIES(
         "include/image_progress"
         "include/serial"
         "include/solver"
+        "include/mercure"
         ${OPENCV_INCLUDE_DIRECTORIES}
         ${Eigen_INCLUDE_DIRECTORIES}
 )
