@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.16.3)
+cmake_minimum_required(VERSION 3.0)
 project(RM_vison)
 
 set(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_BUILD_TYPE Debug)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPATH=\"\\\"${PROJECT_SOURCE_DIR}\\\"\"")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D${CMAKE_SYSTEM_NAME}")
@@ -27,9 +28,11 @@ INCLUDE_DIRECTORIES(
         ${Eigen_INCLUDE_DIRECTORIES}
 )
 
-
+add_subdirectory(
+	${CMAKE_CURRENT_SOURCE_DIR}/src/mercure
+)
 FILE(GLOB_RECURSE sourcefiles "src/*.cpp")
-add_executable(RM_vison ${sourcefiles} include/const/const.h test_include/test.h test_src/test.cpp)
+add_executable(RM_vison  ${sourcefiles} )
 
 
-TARGET_LINK_LIBRARIES(RM_vison  ${OpenCV_LIBS})
+TARGET_LINK_LIBRARIES(RM_vison mercure_driver ${OpenCV_LIBS})

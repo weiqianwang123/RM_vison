@@ -2,11 +2,12 @@
 // Created by oem on 2022/9/11.
 //
 #include "opencv_classifier.h"
-
+#include <iostream>
+using namespace std;
 
 Classifier_lenet5::Classifier_lenet5(/* args */)
 {
-    net = readNet("../RM-vison/configure/opencv_classifier_param/lenet5_small_best_SGD_100epochs.onnx");
+    net = readNet("../RM_vison/configure/opencv_classifier_param/lenet5_small_best_SGD_100epochs.onnx");
     cout<<"opencv_classifier has imported"<<endl;
 }
 

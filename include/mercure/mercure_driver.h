@@ -14,7 +14,9 @@ date   :  2019.05.29
 
 #include <opencv2/opencv.hpp>
 #include <chrono>
-#include "Mat_time.h"
+//删除#include "Mat_time.h"及void operator >>
+#include <iostream>
+using namespace std;
 
 namespace camera{
 
@@ -52,7 +54,7 @@ public:
   GX_STATUS init_sdk();
   void GetVision();
   void operator >> (cv::Mat& Image); // API
-  void operator >> (Mat_time& Image); // API
+
   void LoadParam(const std::string & file_name = "../Configure/Settings.xml");
   void resetParam(const std::string & file_name = "../Configure/Settings.xml");   // 重置相机参数
   ~MercureDriver();

@@ -10,7 +10,7 @@
  * @param   
  */
 bool ArmorDetector::setRoi(){ 
-    roi_=src.clone();
+    roi_=src_.clone();
     return true;
     // if(num>armor_param.num_max||is_findBox==false){
     //     roi=src.clone();
@@ -85,22 +85,22 @@ bool ArmorDetector::setSrc(const Mat &img){
  * @param   rect 灯条的旋转矩形
  */
 bool ArmorDetector::filterLightBlob(const cv::RotatedRect &rect){
-    double lw_rate= rect_.size.height>rect_.size.width?
-                    rect_.size.height/rect_.size.width:
-                    rect_.size.width/rect_.size.height;
+    double lw_rate= rect.size.height>rect.size.width?
+                    rect.size.height/rect.size.width:
+                    rect.size.width/rect.size.height;
     if( lw_rate <  armor_param_.light_min_wihe_ratio || lw_rate > armor_param_.light_max_wihe_ratio){
         // cout<<"lw_rate:"<<lw_rate<<endl;
         return false;
     }
 
-    double area_rate = rect_.size.height*rect_.size.width/(armor_param_.IMAGE_COLS*armor_param_.IMAGE_ROWS);
+    double area_rate = rect.size.height*rect.size.width/(armor_param_.IMAGE_COLS*armor_param_.IMAGE_ROWS);
     if(area_rate<armor_param_.light_min_area_ratio||area_rate>armor_param_.light_max_area_ratio){
         // cout<<"false2 light:"<<area_rate<<endl;
         return false;
     };
 
     
-    double angle_ = rect_.size.height>rect_.size.width? abs(rect_.angle):(rect_.angle+90);
+    double angle_ = rect.size.height>rect.size.width? abs(rect.angle):(rect.angle+90);
     if(angle_>armor_param_.lights_angle_max_dif){
         // cout<<"false3"<<endl;
         return false;
@@ -267,14 +267,14 @@ bool  ArmorDetector::isCoupleLight(const LightBlob &light_blob_i, const LightBlo
     }
     // cout<<"11:"<<abs(sub_centers.y)/min_length<<endl;
     // 灯条的角度必须往一边偏，否则就不是同一组灯条。
-    double angle = abs(light_blob_i.angle - light_blob_j.angle);
+    double angle = abs(light_blob_i.angle_ - light_blob_j.angle_);
     if (angle>armor_param_.cp_lights_angle_diff)
     {
         //cout<<"armor_param.cp_lights_angle_diff:"<<armor_param.cp_lights_angle_diff<<endl;
         return false;
     }
     
-    double angle_mean = abs(light_blob_i.angle + light_blob_j.angle)/2;
+    double angle_mean = abs(light_blob_i.angle_ + light_blob_j.angle_)/2;
     // cout<<"angle mean111:"<<angle_mean<<endl;
     double delt_y = (cos(angle_mean/180.0*3.1415926)*min_length);
     double suby_len_rate = abs(sub_centers.y)/delt_y;

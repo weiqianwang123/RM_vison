@@ -14,12 +14,12 @@ using namespace std;
  * @param dis_size 相对相机的距离及装甲板大小
  */
 ArmorBox::ArmorBox(const cv::RotatedRect &pos, const LightBlobs &blobs, int  box_color, int box_id, DistanceSize dis_size) :
-        rect_(pos), light_Blobs_(blobs),id(box_id),distance_size_(dis_size){
+        rect_(pos), light_Blobs_(blobs),id_(box_id),distance_size_(dis_size){
     //
     };
 
 ArmorBox::ArmorBox(const LightBlob &l_blob, const LightBlob &r_blob,bool Dist_height_rate,int pred_id){
-    is_empty = false;
+    is_empty_ = false;
     set_points(l_blob.rect_,r_blob.rect_);
     RotatedRect rect = minAreaRect(armor_points_);
     this->rect_ = rect;

@@ -212,32 +212,7 @@ namespace camera
         }
     }
 
-    void MercureDriver::operator>>(Mat_time &Image)
-    {
 
-        GXDQBuf(device_, &pFrameBuffer_, 1000);
-
-        try
-        {
-            DxRaw8toRGB24(pFrameBuffer_->pImgBuf,
-                          rgbImagebuf_,
-                          pFrameBuffer_->nWidth,
-                          pFrameBuffer_->nHeight,
-                          RAW2RGB_NEIGHBOUR,
-                          DX_PIXEL_COLOR_FILTER(4), // DX_PIXEL_COLOR_FILTER(colorfilter_),
-                          false);
-
-            memcpy(Image.data, rgbImagebuf_, pFrameBuffer_->nHeight * pFrameBuffer_->nWidth * 3);
-
-            GXQBuf(device_, pFrameBuffer_);
-            Image.setProducedTime();
-        }
-        catch (const std::exception &e)
-        {
-            std::cerr << e.what() << '\n';
-            Image = Mat_time();
-        }
-    }
 
     MercureDriver::~MercureDriver()
     {

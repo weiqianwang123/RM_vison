@@ -8,7 +8,7 @@
                 "/usr/include/eigen3",
                 "${workspaceFolder}/include",
                 "/usr/include/linux",
-                "${workspaceFolder}/*"
+                "${workspaceFolder}/**"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
