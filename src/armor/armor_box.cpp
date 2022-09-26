@@ -83,7 +83,7 @@ void ArmorBox::set_points(const cv::RotatedRect &l_light, const cv::RotatedRect 
  */
 void loadParam(struct ArmorParam & param){
     //string  filename="../params/ArmorBox.xml";
-    string  filename="./congigure/armorbox.xml";
+    string  filename="../configure/armorbox.xml";
     cv::FileStorage fs(filename, cv::FileStorage::READ);
     if(!fs.isOpened()){
         cout<<"please check your armor classifier_param file"<<endl;

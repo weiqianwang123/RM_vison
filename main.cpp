@@ -20,7 +20,7 @@ int main(){
     cout<<"2"<<endl;
 
     //initial the camera
-    VideoCapture capture = VideoCapture("../test.mp4");
+    VideoCapture capture = VideoCapture("../test.avi");
     //camera::MercureDriver capture;
     cout<<"2"<<endl;
     
@@ -29,7 +29,6 @@ int main(){
     bool is_findArmors,is_setroi,is_setSrc,is_settarget;
     ArmorBoxes boxes;
 
-    //Solver solver;
     cout<<"2"<<endl;
     while(1){
         
@@ -45,6 +44,8 @@ int main(){
         is_findArmors = armor_detector.findArmorBoxes();
 
         is_settarget = armor_detector.setTargetBox();
+
+
         cout<<"target_box.is_empty:"<<armor_detector.target_box_.is_empty_<<endl;
 
         
@@ -53,8 +54,12 @@ int main(){
         cout<<"the time costed in detecting is "<<time2<<endl;
         //show_armorBoxes(armor_detector,true);
 
+        armor_detector.solvePnp();
+
+
+
         imshow("src_img",src_img);
-        waitKey();
+        waitKey(1);
 
         
     }

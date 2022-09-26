@@ -7,7 +7,7 @@ using namespace std;
 
 Classifier_lenet5::Classifier_lenet5(/* args */)
 {
-    net = readNet("../RM_vison/configure/opencv_classifier_param/lenet5_small_best_SGD_100epochs.onnx");
+    net = readNet("../configure/opencv_classifier_param/lenet5_small_best_SGD_100epochs.onnx");
     cout<<"opencv_classifier has imported"<<endl;
 }
 

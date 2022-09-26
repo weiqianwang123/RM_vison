@@ -8,6 +8,7 @@
 #include <string>
 #include "armor_box.h"
 #include "opencv_classifier.h"
+#include "solver.h"
 using namespace cv;
 
 class ArmorDetector
@@ -15,6 +16,7 @@ class ArmorDetector
 private:
     //!  分类器
     Classifier_lenet5 classifier;
+    Solver solver_;
 
     // roi区域追踪帧数；
     int num_=1;
@@ -114,6 +116,8 @@ public:
     bool findArmorBoxes(); 
 
 bool filterLightBlob(const cv::RotatedRect &rect);
+
+void solvePnp();
 
 /**
  * @brief   构造检测器

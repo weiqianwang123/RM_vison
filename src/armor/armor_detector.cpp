@@ -5,6 +5,7 @@
 
 #include "armor_detector.h"
 
+
 /**
  * @brief 设置ROI区域
  * @param   
@@ -314,7 +315,8 @@ bool  ArmorDetector::isCoupleLight(const LightBlob &light_blob_i, const LightBlo
     // imshow("the classifier pic",roi_classifier);waitKey(1);
     
     //!!!!!
-    //id_ = classifier.classifier(roi_classifier);
+    id = classifier.classifier(roi_classifier);
+    cout<< id ;
     // if(id==8||id==9||id==10){
     //     return false;
 
@@ -424,5 +426,31 @@ bool ArmorDetector::setTargetBox(){
             target_box_.is_empty_=true;
         }
     }
+
     return true;
+}
+
+//
+/**
+ * @brief  pnp
+ * @param  light_blobs 筛选后得到的灯条集
+ * @param  armor_boxes 得到的装甲板集
+ */
+void ArmorDetector::solvePnp()
+{
+    if(target_box_.is_empty_== false)
+    {
+        vector<Point2f> pts;
+        pts.push_back(target_box_.armor_points_[1]);
+        pts.push_back(target_box_.armor_points_[2]);
+        pts.push_back(target_box_.armor_points_[3]);
+        pts.push_back(target_box_.armor_points_[0]);
+
+        auto targetbox_size = target_box_.armortype_;
+        solver_.solve(pts,targetbox_size);
+        cout<<"distance"<<solver_.distance<<endl;
+
+
+    }
+
 }

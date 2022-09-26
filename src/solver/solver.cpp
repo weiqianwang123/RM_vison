@@ -64,7 +64,7 @@ void Solver::set2DPoints(const std::vector<cv::Point2f> &_points_2D){
 SolverParam::SolverParam()
 {
 
-    cv::FileStorage fs("../Configure/Settings.xml", cv::FileStorage::READ);
+    cv::FileStorage fs("../configure/settings.xml", cv::FileStorage::READ);
     fs["camera_matrix"] >> camera_matrix;
     fs["dist_coeffs"] >> dist_coeffs;
     fs["small_armor_boxes_real_height"] >> small_armor_boxes_real_height;
