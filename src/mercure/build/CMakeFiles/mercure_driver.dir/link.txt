@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmercure_driver.a  CMakeFiles/mercure_driver.dir/mercure_driver.cpp.o
-/usr/bin/ranlib libmercure_driver.a
