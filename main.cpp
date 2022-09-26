@@ -17,10 +17,12 @@ int main(){
     Mat src_img;
     //src_img.create(800,1200,CV_8UC3);
     src_img.create(720,1280,CV_8UC3);
+    cout<<"2"<<endl;
 
     //initial the camera
-    //VideoCapture capture = VideoCapture("../test.mp4");
+    VideoCapture capture = VideoCapture("../test.mp4");
     //camera::MercureDriver capture;
+    cout<<"2"<<endl;
     
     // initial the armordetector
     ArmorDetector armor_detector = ArmorDetector();
@@ -28,30 +30,33 @@ int main(){
     ArmorBoxes boxes;
 
     //Solver solver;
-
+    cout<<"2"<<endl;
     while(1){
         
         
-        // double time1 = static_cast<double>( getTickCount()); //记录起始时间，其中getTickCount()函数返回CPU 自某个事件（如启动电脑）以来走过的时钟周期数
-        // capture >> src_img;
-        // cout<<" "<<src_img.size().height<<endl;
+        double time1 = static_cast<double>( getTickCount()); //记录起始时间，其中getTickCount()函数返回CPU 自某个事件（如启动电脑）以来走过的时钟周期数
+        capture >> src_img;
+        cout<<" "<<src_img.size().height<<endl;
 
-        // is_setSrc = armor_detector.setSrc(src_img);
+        is_setSrc = armor_detector.setSrc(src_img);
 
-        // is_setroi = armor_detector.setRoi();//未设置roi
+        is_setroi = armor_detector.setRoi();//未设置roi
         
-        // is_findArmors = armor_detector.findArmorBoxes();
+        is_findArmors = armor_detector.findArmorBoxes();
 
-        // is_settarget = armor_detector.setTargetBox();
-        // cout<<"target_box.is_empty:"<<armor_detector.target_box.is_empty<<endl;
+        is_settarget = armor_detector.setTargetBox();
+        cout<<"target_box.is_empty:"<<armor_detector.target_box_.is_empty_<<endl;
 
         
-        // double time2 = (static_cast<double>( getTickCount()) - time1)/getTickFrequency()*1000;
+        double time2 = (static_cast<double>( getTickCount()) - time1)/getTickFrequency()*1000;
 
-        // cout<<"the time costed in detecting is "<<time2<<endl;
-        // show_armorBoxes(armor_detector,true);
+        cout<<"the time costed in detecting is "<<time2<<endl;
+        //show_armorBoxes(armor_detector,true);
 
-        return 0;
+        imshow("src_img",src_img);
+        waitKey();
+
+        
     }
 
     return 0;

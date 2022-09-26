@@ -57,9 +57,22 @@ include CMakeFiles/RM_vison.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RM_vison.dir/flags.make
 
+CMakeFiles/RM_vison.dir/main.cpp.o: CMakeFiles/RM_vison.dir/flags.make
+CMakeFiles/RM_vison.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RM_vison.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/main.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/main.cpp
+
+CMakeFiles/RM_vison.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RM_vison.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cwl/Desktop/irobot-23/RM_vison/main.cpp > CMakeFiles/RM_vison.dir/main.cpp.i
+
+CMakeFiles/RM_vison.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RM_vison.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cwl/Desktop/irobot-23/RM_vison/main.cpp -o CMakeFiles/RM_vison.dir/main.cpp.s
+
 CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o: ../src/armor/armor_box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/armor/armor_box.cpp
 
 CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o: ../src/armor/armor_detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/armor/armor_detector.cpp
 
 CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o: ../src/classifier/opencv_classifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/classifier/opencv_classifier.cpp
 
 CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o: ../src/debug/rm_debug.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/debug/rm_debug.cpp
 
 CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o: ../src/extend/mat_time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/extend/mat_time.cpp
 
 CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o: ../src/extend/tools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/extend/tools.cpp
 
 CMakeFiles/RM_vison.dir/src/extend/tools.cpp.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/RM_vison.dir/src/extend/tools.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o: ../src/image_progress/image_progress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/image_progress/image_progress.cpp
 
 CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.i: cmake_force
@@ -148,9 +161,22 @@ CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cwl/Desktop/irobot-23/RM_vison/src/image_progress/image_progress.cpp -o CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.s
 
+CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/RM_vison.dir/flags.make
+CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: ../src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
+
+CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cwl/Desktop/irobot-23/RM_vison/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp > CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cwl/Desktop/irobot-23/RM_vison/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp -o CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
 CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o: ../src/mercure/mercure_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/mercure/mercure_driver.cpp
 
 CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.i: cmake_force
@@ -163,7 +189,7 @@ CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o: ../src/serial/can_serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/serial/can_serial.cpp
 
 CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.i: cmake_force
@@ -176,7 +202,7 @@ CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.s: cmake_force
 
 CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o: CMakeFiles/RM_vison.dir/flags.make
 CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o: ../src/solver/solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o -c /home/cwl/Desktop/irobot-23/RM_vison/src/solver/solver.cpp
 
 CMakeFiles/RM_vison.dir/src/solver/solver.cpp.i: cmake_force
@@ -189,6 +215,7 @@ CMakeFiles/RM_vison.dir/src/solver/solver.cpp.s: cmake_force
 
 # Object files for target RM_vison
 RM_vison_OBJECTS = \
+"CMakeFiles/RM_vison.dir/main.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o" \
@@ -196,6 +223,7 @@ RM_vison_OBJECTS = \
 "CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o" \
+"CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o" \
 "CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o"
@@ -203,6 +231,7 @@ RM_vison_OBJECTS = \
 # External object files for target RM_vison
 RM_vison_EXTERNAL_OBJECTS =
 
+RM_vison: CMakeFiles/RM_vison.dir/main.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o
@@ -210,6 +239,7 @@ RM_vison: CMakeFiles/RM_vison.dir/src/debug/rm_debug.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o
+RM_vison: CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o
 RM_vison: CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o
@@ -267,7 +297,7 @@ RM_vison: /usr/local/lib/libopencv_world.so.4.4.0
 RM_vison: /usr/local/lib/libopencv_world.so.4.4.0
 RM_vison: /usr/local/lib/libopencv_world.so.4.4.0
 RM_vison: CMakeFiles/RM_vison.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable RM_vison"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cwl/Desktop/irobot-23/RM_vison/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable RM_vison"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RM_vison.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

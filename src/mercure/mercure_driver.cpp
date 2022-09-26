@@ -4,7 +4,8 @@ brief  :  Mercure Camera driver
 author :  XDU Robomaster, skystarry
 date   :  2019.05.29
 ---------------------------------------------------------------*/
-#include "mercure_driver.h"
+//#include "mercure_driver.h"
+#include "/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/mercure_driver.h"
 
 namespace camera
 {

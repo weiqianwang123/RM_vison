@@ -9,12 +9,11 @@ enum COLOR{
     RED = 2,
     OTHER_COLOR = 3
 };
-
-enum ArmorType{
-    SMALL = 0,
-    BIG = 1,
-    RUNE_ARMOR = 2
-};
+    enum ArmorType{
+        SMALL = 0,
+        BIG = 1,
+        RUNE_ARMOR = 2
+    };
 
 enum ArmorState{
     LOST = 0,       // 丢失目标

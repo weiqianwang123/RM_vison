@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../include/mercure/DxImageProc.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/DxImageProc.h
 stdafx.h
-../include/mercure/stdafx.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/stdafx.h
 stdlib.h
 -
 string.h
 -
 
-../include/mercure/GxIAPI.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/GxIAPI.h
 stdint.h
 -
 stdint.h
@@ -26,11 +26,11 @@ stddef.h
 Windows.h
 -
 
-../include/mercure/mercure_driver.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/mercure_driver.h
 DxImageProc.h
-../include/mercure/DxImageProc.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/DxImageProc.h
 GxIAPI.h
-../include/mercure/GxIAPI.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/GxIAPI.h
 opencv2/opencv.hpp
 -
 chrono
@@ -39,8 +39,8 @@ iostream
 -
 
 /home/cwl/Desktop/irobot-23/RM_vison/src/mercure/mercure_driver.cpp
-mercure_driver.h
-/home/cwl/Desktop/irobot-23/RM_vison/src/mercure/mercure_driver.h
+/home/cwl/Desktop/irobot-23/RM_vison/include/mercure/mercure_driver.h
+-
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp

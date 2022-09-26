@@ -5,9 +5,11 @@ project(mercure_driver)
 
 message(STATUS "Configuring Sub_project:mercure_drive")
 
+find_package(OpenCV 4 REQUIRED)
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
-
+    ${OPENCV_INCLUDE_DIRECTORIES}
 )
 
 #detect_factory

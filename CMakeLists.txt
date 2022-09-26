@@ -32,7 +32,7 @@ add_subdirectory(
 	${CMAKE_CURRENT_SOURCE_DIR}/src/mercure
 )
 FILE(GLOB_RECURSE sourcefiles "src/*.cpp")
-add_executable(RM_vison  ${sourcefiles} )
+add_executable(RM_vison  main.cpp ${sourcefiles} )
 
 
 TARGET_LINK_LIBRARIES(RM_vison mercure_driver ${OpenCV_LIBS})

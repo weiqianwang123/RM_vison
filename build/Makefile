@@ -136,6 +136,33 @@ mercure_driver/fast:
 	$(MAKE) -f src/mercure/CMakeFiles/mercure_driver.dir/build.make src/mercure/CMakeFiles/mercure_driver.dir/build
 .PHONY : mercure_driver/fast
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 src/armor/armor_box.o: src/armor/armor_box.cpp.o
 
 .PHONY : src/armor/armor_box.o
@@ -325,6 +352,33 @@ src/image_progress/image_progress.cpp.s:
 	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.s
 .PHONY : src/image_progress/image_progress.cpp.s
 
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.o: src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.o
+
+# target to build an object file
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.i: src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.i
+
+# target to preprocess a source file
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.s: src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.s
+
+# target to generate assembly for a file
+src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
+	$(MAKE) -f CMakeFiles/RM_vison.dir/build.make CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
 src/mercure/mercure_driver.o: src/mercure/mercure_driver.cpp.o
 
 .PHONY : src/mercure/mercure_driver.o
@@ -416,6 +470,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... RM_vison"
 	@echo "... mercure_driver"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/armor/armor_box.o"
 	@echo "... src/armor/armor_box.i"
 	@echo "... src/armor/armor_box.s"
@@ -437,6 +494,9 @@ help:
 	@echo "... src/image_progress/image_progress.o"
 	@echo "... src/image_progress/image_progress.i"
 	@echo "... src/image_progress/image_progress.s"
+	@echo "... src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.o"
+	@echo "... src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.i"
+	@echo "... src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.s"
 	@echo "... src/mercure/mercure_driver.o"
 	@echo "... src/mercure/mercure_driver.i"
 	@echo "... src/mercure/mercure_driver.s"

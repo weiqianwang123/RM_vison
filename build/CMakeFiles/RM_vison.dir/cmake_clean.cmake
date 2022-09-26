@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RM_vison.dir/main.cpp.o"
   "CMakeFiles/RM_vison.dir/src/armor/armor_box.cpp.o"
   "CMakeFiles/RM_vison.dir/src/armor/armor_detector.cpp.o"
   "CMakeFiles/RM_vison.dir/src/classifier/opencv_classifier.cpp.o"
@@ -6,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RM_vison.dir/src/extend/mat_time.cpp.o"
   "CMakeFiles/RM_vison.dir/src/extend/tools.cpp.o"
   "CMakeFiles/RM_vison.dir/src/image_progress/image_progress.cpp.o"
+  "CMakeFiles/RM_vison.dir/src/mercure/build/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
   "CMakeFiles/RM_vison.dir/src/mercure/mercure_driver.cpp.o"
   "CMakeFiles/RM_vison.dir/src/serial/can_serial.cpp.o"
   "CMakeFiles/RM_vison.dir/src/solver/solver.cpp.o"

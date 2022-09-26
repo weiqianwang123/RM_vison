@@ -10,6 +10,7 @@
 #include <string>
 #include <cmath>
 #include<vector>
+#include <const.h>
 
 const int IMAGE_COLS=1200;
 const int IMAGE_ROWS=800;
@@ -113,11 +114,7 @@ typedef std::vector<LightBlob> LightBlobs;
 
 /********************* 装甲板类定义　************************/
 
-    enum ArmorType{
-        SMALL = 0,
-        BIG = 1,
-        RUNE_ARMOR = 2
-    };//缝合
+//缝合
 
 class ArmorBox
 {
