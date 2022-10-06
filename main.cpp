@@ -20,7 +20,7 @@ int main(){
     cout<<"2"<<endl;
 
     //initial the camera
-    VideoCapture capture = VideoCapture("../test.avi");
+    VideoCapture capture(2);
     //camera::MercureDriver capture;
     cout<<"2"<<endl;
     
@@ -36,6 +36,7 @@ int main(){
         double time1 = static_cast<double>( getTickCount()); //记录起始时间，其中getTickCount()函数返回CPU 自某个事件（如启动电脑）以来走过的时钟周期数
         capture >> src_img;
         cout<<" "<<src_img.size().height<<endl;
+        cout<<" "<<src_img.size().width<<endl;
 
         is_setSrc = armor_detector.setSrc(src_img);
 

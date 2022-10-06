@@ -21,7 +21,7 @@ INCLUDE_DIRECTORIES(
         "include/debug"
         "include/extend"
         "include/image_progress"
-        "include/serial"
+        "include/communication"
         "include/solver"
         "include/mercure"
         ${OPENCV_INCLUDE_DIRECTORIES}
@@ -32,7 +32,7 @@ add_subdirectory(
 	${CMAKE_CURRENT_SOURCE_DIR}/src/mercure
 )
 FILE(GLOB_RECURSE sourcefiles "src/*.cpp")
-add_executable(RM_vison   ${sourcefiles} main.cpp)
+add_executable(RM_vison   ${sourcefiles} main.cpp include/solver/predict.h src/solver/predict.cpp include/communication/base.h include/communication/serial_communication.h src/communication/serial_communication.cpp include/communication/serial_datacheck.h src/communication/serial_datacheck.cpp)
 
 
 TARGET_LINK_LIBRARIES(RM_vison mercure_driver ${OpenCV_LIBS})

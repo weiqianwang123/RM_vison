@@ -12,8 +12,8 @@
 #include<vector>
 #include <const.h>
 
-const int IMAGE_COLS=1200;
-const int IMAGE_ROWS=800;
+const int IMAGE_COLS=480;
+const int IMAGE_ROWS=640;
 const int IMAGE_CENTER_X=IMAGE_COLS/2.0;
 const int IMAGE_CENTER_Y=IMAGE_ROWS/2.0;
 

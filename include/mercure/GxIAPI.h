@@ -210,10 +210,10 @@ typedef int32_t GX_ACCESS_STATUS_CMD;
 //------------------------------------------------------------------------------
 typedef enum GX_OPEN_MODE
 {
-    GX_OPEN_SN                          = 0,           ///< Opens the device via a serial number
+    GX_OPEN_SN                          = 0,           ///< Opens the device via a communication number
     GX_OPEN_IP                          = 1,           ///< Opens the device via an IP address
     GX_OPEN_MAC                         = 2,           ///< Opens the device via a MAC address
-    GX_OPEN_INDEX                       = 3,           ///< Opens the device via a serial number (Start from 1, such as 1, 2, 3, 4...)
+    GX_OPEN_INDEX                       = 3,           ///< Opens the device via a communication number (Start from 1, such as 1, 2, 3, 4...)
     GX_OPEN_USERID                      = 4,           ///< Opens the device via user defined ID
 }GX_OPEN_MODE;
 typedef int32_t GX_OPEN_MODE_CMD;
@@ -241,7 +241,7 @@ typedef enum GX_FEATURE_ID
     GX_STRING_DEVICE_MODEL_NAME                = 1   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Model of the device.
     GX_STRING_DEVICE_FIRMWARE_VERSION          = 2   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Version of the firmware in the device.
     GX_STRING_DEVICE_VERSION                   = 3   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Version of the device.
-    GX_STRING_DEVICE_SERIAL_NUMBER             = 4   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Device serial number.
+    GX_STRING_DEVICE_SERIAL_NUMBER             = 4   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Device communication number.
     GX_STRING_FACTORY_SETTING_VERSION          = 6   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Factory parameter version
     GX_STRING_DEVICE_USERID                    = 7   | GX_FEATURE_STRING | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< User-programmable device identifier.
     GX_INT_DEVICE_LINK_SELECTOR                = 8   | GX_FEATURE_INT    | GX_FEATURE_LEVEL_REMOTE_DEV,   ///< Selects which Link of the device to control.
@@ -975,7 +975,7 @@ typedef struct GX_DEVICE_BASE_INFO
 {
     char szVendorName[GX_INFO_LENGTH_32_BYTE];           ///< vendor name, 32 bytes
     char szModelName[GX_INFO_LENGTH_32_BYTE];            ///< model name, 32 bytes
-    char szSN[GX_INFO_LENGTH_32_BYTE];                   ///< device serial number, 32 bytes
+    char szSN[GX_INFO_LENGTH_32_BYTE];                   ///< device communication number, 32 bytes
     char szDisplayName[GX_INFO_LENGTH_128_BYTE + 4];     ///< device display name, 128+4 bytes
     char szDeviceID[GX_INFO_LENGTH_64_BYTE + 4];         ///< the unique identifier of the device, 64+4 bytes
     char szUserID[GX_INFO_LENGTH_64_BYTE + 4];           ///< user-defined name, 64+4 bytes
@@ -986,7 +986,7 @@ typedef struct GX_DEVICE_BASE_INFO
 
 typedef struct GX_OPEN_PARAM 
 {
-    char              *pszContent;                       ///< Standard C string that is decided by openMode. It could be an IP address, a camera serial number, and so on
+    char              *pszContent;                       ///< Standard C string that is decided by openMode. It could be an IP address, a camera communication number, and so on
     GX_OPEN_MODE_CMD   openMode;                         ///< Device open mode. The device can be open via the SN, IP, MAC, etc. Please refer to GX_OPEN_MODE
     GX_ACCESS_MODE_CMD accessMode;                       ///< Device access mode, such as read-only, control, exclusive, etc. Please refer to GX_ACCESS_MODE
 }GX_OPEN_PARAM;
@@ -1210,7 +1210,7 @@ GX_API GXGetAllDeviceBaseInfo (GX_DEVICE_BASE_INFO *pDeviceInfo, size_t *pBuffer
 \attention  You should call the GxUpdateDeviceList() interface for an enumeration before calling the function to
             get the device information. Otherwise, the device information that the user gets is inconsistent with
             the device that is currently connected.
-\param      [in]  nIndex          The serial number of the device.
+\param      [in]  nIndex          The communication number of the device.
 \param      [out] pstDeviceIPInfo The structure pointer of the device information.
 \return     GX_STATUS_SUCCESS             The operation is successful and no error occurs.
             GX_STATUS_NOT_INIT_API        The GXInitLib initialization library is not called.
