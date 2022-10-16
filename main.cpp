@@ -1,6 +1,7 @@
 #include<iostream>
 #include"armor_box.h"
 #include"armor_detector.h"
+#include"can_serial.h"
 #include"mercure_driver.h"
 //#include"debug.h"
 #include"opencv_classifier.h"
@@ -16,20 +17,20 @@ int main(){
     // create a image as source image
     Mat src_img;
     //src_img.create(800,1200,CV_8UC3);
-    src_img.create(720,1280,CV_8UC3);
-    cout<<"2"<<endl;
+    //src_img.create(720,1280,CV_8UC3);
 
     //initial the camera
-    VideoCapture capture(2);
+    VideoCapture capture(0);
     //camera::MercureDriver capture;
-    cout<<"2"<<endl;
     
     // initial the armordetector
     ArmorDetector armor_detector = ArmorDetector();
     bool is_findArmors,is_setroi,is_setSrc,is_settarget;
     ArmorBoxes boxes;
 
-    cout<<"2"<<endl;
+
+    CanSerial can_serial = CanSerial();
+
     while(1){
         
         
@@ -62,8 +63,43 @@ int main(){
         imshow("src_img",src_img);
         waitKey(1);
 
+
+
+        // if(armor_detector.is_findBox_ == true){
+
+        //     int state = 1;
+        // }
+        // else if(armor_detector.is_findBox_ == false){
+
+        //     int state = 0;
+        // }
+        int state = 1;
+        int target_id = 1;//暂时用定值
+        int is_fire = 1;//暂时用定值
+
+        can_serial.send_state(state,target_id,is_fire);
+
+
+        float pitch_predict_camera = 10;
+        float yaw_predict_camera = 20;
+        u_int32_t timestamp = 1600;
+        //u_int32_t timestamp = (u_int32_t)( (getTickCount()-time1) / cv::getTickFrequency() * 1000); 
+
+        can_serial.send_data(pitch_predict_camera,yaw_predict_camera,timestamp);
+
+
+        uint id = 0;
+        uchar buf[8] = {0};
+        uchar dlc = 0;
+        //uint &id, u_char *buf, u_char &dlc
+        can_serial.can_receive(id,buf,dlc);
+        cout<<"id: "<<id<<endl;
+        cout<<"dlc: "<<dlc<<endl;
+
+        cout<<111<<endl;
+
         
     }
 
     return 0;
-}//#include"debug.h"
+}

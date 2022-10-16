@@ -86,7 +86,7 @@ void Ballistics::caculate_best_ballistics()
     double v_y=0;
     double v_z=0;
     double t = sqrt(x*x+y*y)/ballisticsParam.bullte_speed;
-    ceres::Problem problem;
+    ceres::Problem problem;//有问题
     problem.AddResidualBlock(
             new ceres::AutoDiffCostFunction<CostFunction,1,1>(new CostFunction(v_x,v_y,v_z,ballisticsParam.bullte_speed,point_realworld.y(),g,m_div_k,point_realworld.x(),point_realworld.z())),
             nullptr,
@@ -98,7 +98,7 @@ void Ballistics::caculate_best_ballistics()
     options.linear_solver_type = ceres::DENSE_QR;
     options.minimizer_progress_to_stdout = true;
     options.logging_type = ceres::LoggingType::SILENT;
-    ceres::Solve(options, &problem, &summary);  // 开始优化，求解
+    ceres::Solve(options, &problem, &summary);  // 开始优化，求解 //有问题
 
     point_predict_realworld.x() =  (x)+(t)*(v_x);
     point_predict_realworld.y() =  y + t*v_y;
